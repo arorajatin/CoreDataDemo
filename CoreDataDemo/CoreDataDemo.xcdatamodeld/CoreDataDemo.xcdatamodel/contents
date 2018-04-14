@@ -5,11 +5,13 @@
         <relationship name="employees" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Employee" inverseName="department" inverseEntity="Employee" syncable="YES"/>
     </entity>
     <entity name="Employee" representedClassName="Employee" syncable="YES">
+        <attribute name="amazing" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="employees" inverseEntity="Department" syncable="YES"/>
     </entity>
     <elements>
         <element name="Department" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="Employee" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Employee" positionX="-54" positionY="-9" width="128" height="105"/>
     </elements>
 </model>

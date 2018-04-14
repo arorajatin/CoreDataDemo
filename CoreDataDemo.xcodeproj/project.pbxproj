@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910629E12081DE2800E48217 /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910629E02081DE2800E48217 /* Employee+CoreDataProperties.swift */; };
 		91417DD12080F9D2002E7F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DD02080F9D2002E7F97 /* AppDelegate.swift */; };
 		91417DD32080F9D2002E7F97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DD22080F9D2002E7F97 /* ViewController.swift */; };
 		91417DD62080F9D2002E7F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91417DD42080F9D2002E7F97 /* Main.storyboard */; };
@@ -15,13 +16,13 @@
 		91417DDE2080F9D4002E7F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91417DDC2080F9D4002E7F97 /* LaunchScreen.storyboard */; };
 		91417DE62080FDFD002E7F97 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DE52080FDFD002E7F97 /* PersistenceController.swift */; };
 		91417DE920810B25002E7F97 /* Employee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DE720810B25002E7F97 /* Employee+CoreDataClass.swift */; };
-		91417DEA20810B25002E7F97 /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DE820810B25002E7F97 /* Employee+CoreDataProperties.swift */; };
 		91417DED20810B5E002E7F97 /* Department+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DEB20810B5E002E7F97 /* Department+CoreDataClass.swift */; };
 		91417DEE20810B5E002E7F97 /* Department+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DEC20810B5E002E7F97 /* Department+CoreDataProperties.swift */; };
 		91417DF520819ABD002E7F97 /* CoreDataModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DF420819ABD002E7F97 /* CoreDataModelable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		910629E02081DE2800E48217 /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		91417DCD2080F9D2002E7F97 /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91417DD02080F9D2002E7F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91417DD22080F9D2002E7F97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,7 +33,6 @@
 		91417DDF2080F9D4002E7F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91417DE52080FDFD002E7F97 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		91417DE720810B25002E7F97 /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataClass.swift"; sourceTree = "<group>"; };
-		91417DE820810B25002E7F97 /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		91417DEB20810B5E002E7F97 /* Department+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Department+CoreDataClass.swift"; sourceTree = "<group>"; };
 		91417DEC20810B5E002E7F97 /* Department+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Department+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		91417DF420819ABD002E7F97 /* CoreDataModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelable.swift; sourceTree = "<group>"; };
@@ -85,10 +85,10 @@
 		91417DEF20810B69002E7F97 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				910629E02081DE2800E48217 /* Employee+CoreDataProperties.swift */,
 				91417DEB20810B5E002E7F97 /* Department+CoreDataClass.swift */,
 				91417DEC20810B5E002E7F97 /* Department+CoreDataProperties.swift */,
 				91417DE720810B25002E7F97 /* Employee+CoreDataClass.swift */,
-				91417DE820810B25002E7F97 /* Employee+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,7 +165,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				91417DD32080F9D2002E7F97 /* ViewController.swift in Sources */,
-				91417DEA20810B25002E7F97 /* Employee+CoreDataProperties.swift in Sources */,
 				91417DD92080F9D2002E7F97 /* CoreDataDemo.xcdatamodeld in Sources */,
 				91417DD12080F9D2002E7F97 /* AppDelegate.swift in Sources */,
 				91417DE920810B25002E7F97 /* Employee+CoreDataClass.swift in Sources */,
@@ -173,6 +172,7 @@
 				91417DEE20810B5E002E7F97 /* Department+CoreDataProperties.swift in Sources */,
 				91417DE62080FDFD002E7F97 /* PersistenceController.swift in Sources */,
 				91417DED20810B5E002E7F97 /* Department+CoreDataClass.swift in Sources */,
+				910629E12081DE2800E48217 /* Employee+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

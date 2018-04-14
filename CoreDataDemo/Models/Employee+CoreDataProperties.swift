@@ -2,7 +2,7 @@
 //  Employee+CoreDataProperties.swift
 //  CoreDataDemo
 //
-//  Created by Jatin on 13/04/18.
+//  Created by Jatin on 14/04/18.
 //  Copyright © 2018 Jatin. All rights reserved.
 //
 //
@@ -18,6 +18,8 @@ extension Employee {
     }
 
     @NSManaged public var name: String
+    @NSManaged public var amazing: Bool
+    @NSManaged public var score: Int64
     @NSManaged public var department: Department?
 
 }

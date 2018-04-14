@@ -99,6 +99,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func injectObjects() {
         
+        var amazing = false
+        
         for i in 0..<100 {
 
             if let department = NSEntityDescription.insertNewObject(forEntityName: "Department", into: moc) as?
@@ -111,6 +113,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                         Employee {
                         
                         employee.name = "Emp" + "\(i)" + "\(j)"
+                        amazing = !amazing
+                        employee.amazing = amazing
+                        employee.score = Int64(random())
                         department.addToEmployees(employee)
                     }
                     
@@ -187,6 +192,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //        if let employee = Employee.findOrFetch(in: self.moc, matching: predicate) {
 //            print("\(employee.name)")
 //        }
+    }
+    
+    func random() -> Int {
+        let lower : UInt32 = 0
+        let upper : UInt32 = 100
+        return Int(arc4random_uniform(upper - lower) + lower)
     }
     
     
