@@ -14,6 +14,10 @@
 		91417DDB2080F9D4002E7F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91417DDA2080F9D4002E7F97 /* Assets.xcassets */; };
 		91417DDE2080F9D4002E7F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91417DDC2080F9D4002E7F97 /* LaunchScreen.storyboard */; };
 		91417DE62080FDFD002E7F97 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DE52080FDFD002E7F97 /* PersistenceController.swift */; };
+		91417DE920810B25002E7F97 /* Employee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DE720810B25002E7F97 /* Employee+CoreDataClass.swift */; };
+		91417DEA20810B25002E7F97 /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DE820810B25002E7F97 /* Employee+CoreDataProperties.swift */; };
+		91417DED20810B5E002E7F97 /* Department+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DEB20810B5E002E7F97 /* Department+CoreDataClass.swift */; };
+		91417DEE20810B5E002E7F97 /* Department+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DEC20810B5E002E7F97 /* Department+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		91417DDD2080F9D4002E7F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91417DDF2080F9D4002E7F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91417DE52080FDFD002E7F97 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		91417DE720810B25002E7F97 /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataClass.swift"; sourceTree = "<group>"; };
+		91417DE820810B25002E7F97 /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		91417DEB20810B5E002E7F97 /* Department+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Department+CoreDataClass.swift"; sourceTree = "<group>"; };
+		91417DEC20810B5E002E7F97 /* Department+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Department+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		91417DCF2080F9D2002E7F97 /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
+				91417DEF20810B69002E7F97 /* Models */,
 				91417DD02080F9D2002E7F97 /* AppDelegate.swift */,
 				91417DD22080F9D2002E7F97 /* ViewController.swift */,
 				91417DD42080F9D2002E7F97 /* Main.storyboard */,
@@ -68,6 +77,17 @@
 				91417DE52080FDFD002E7F97 /* PersistenceController.swift */,
 			);
 			path = CoreDataDemo;
+			sourceTree = "<group>";
+		};
+		91417DEF20810B69002E7F97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91417DEB20810B5E002E7F97 /* Department+CoreDataClass.swift */,
+				91417DEC20810B5E002E7F97 /* Department+CoreDataProperties.swift */,
+				91417DE720810B25002E7F97 /* Employee+CoreDataClass.swift */,
+				91417DE820810B25002E7F97 /* Employee+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				91417DD32080F9D2002E7F97 /* ViewController.swift in Sources */,
+				91417DEA20810B25002E7F97 /* Employee+CoreDataProperties.swift in Sources */,
 				91417DD92080F9D2002E7F97 /* CoreDataDemo.xcdatamodeld in Sources */,
 				91417DD12080F9D2002E7F97 /* AppDelegate.swift in Sources */,
+				91417DE920810B25002E7F97 /* Employee+CoreDataClass.swift in Sources */,
+				91417DEE20810B5E002E7F97 /* Department+CoreDataProperties.swift in Sources */,
 				91417DE62080FDFD002E7F97 /* PersistenceController.swift in Sources */,
+				91417DED20810B5E002E7F97 /* Department+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

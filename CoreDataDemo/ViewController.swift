@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 enum Section: Int {
     
@@ -22,6 +23,12 @@ enum Section: Int {
 final class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    let moc: NSManagedObjectContext
+    
+    required init?(coder aDecoder: NSCoder) {
+        moc = PersistenceController.shared.persistentContainer.viewContext
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +69,78 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let section = Section(rawValue: indexPath.row) else {
+            fatalError()
+        }
+        
+        switch section {
+        case .injectObjects:
+            self.injectObjects()
+        case .fetchRequest:
+            self.fetchRequestTest()
+        case .faults:
+            self.faultsTest()
+        case .performance:
+            self.performanceTest()
+        default:
+            print("")
+        }
+        
+    }
+    
+    func injectObjects() {
+        
+        for i in 0..<100 {
+
+            if let department = NSEntityDescription.insertNewObject(forEntityName: "Department", into: moc) as?
+                Department {
+                department.name = "D" + "\(i)"
+                
+                for j in 0..<100 {
+                    
+                    if let employee = NSEntityDescription.insertNewObject(forEntityName: "Employee", into: moc) as?
+                        Employee {
+                        
+                        employee.name = "Emp" + "\(i)" + "\(j)"
+                        department.addToEmployees(employee)
+                    }
+                    
+                }
+                
+            }
+        }
+        
+        try? moc.save()
+    }
+    
+    func fetchRequestTest() {
+        
+        let fetchRequest = NSFetchRequest<Employee>(entityName: "Employee")
+        fetchRequest.predicate = NSPredicate(format: "department.name = %@", "D1")
+        fetchRequest.returnsObjectsAsFaults = true
+        
+        if let employees = try? self.moc.fetch(fetchRequest) {
+            print("Employees = \(String(describing: employees))")
+            
+            for employee in employees {
+                print("")
+                print("\(employee.name)")
+            }
+        }
+        
+    }
+    
+    func faultsTest() {
+        
+    }
+    
+    func performanceTest() {
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Section._count.rawValue
