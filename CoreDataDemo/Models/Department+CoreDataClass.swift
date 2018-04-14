@@ -11,6 +11,8 @@ import Foundation
 import CoreData
 
 @objc(Department)
-public class Department: NSManagedObject {
-
+public class Department: NSManagedObject, CoreDataModelable {
+    static var entityName: String {
+        return "Department"
+    }
 }

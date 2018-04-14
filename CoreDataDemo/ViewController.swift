@@ -14,7 +14,8 @@ enum Section: Int {
     case injectObjects
     case fetchRequest
     case faults
-    case performance
+    case prefetch
+    case findOrFetch
     
     case _count
     
@@ -24,6 +25,7 @@ final class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     let moc: NSManagedObjectContext
+    var object: NSManagedObject?
     
     required init?(coder aDecoder: NSCoder) {
         moc = PersistenceController.shared.persistentContainer.viewContext
@@ -61,9 +63,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = "Fetch Request"
         case .faults:
             cell.textLabel?.text = "Faults"
-        case .performance:
+        case .prefetch:
+            cell.textLabel?.text = "Prefetch"
+        case .findOrFetch:
             cell.textLabel?.text = "Performance"
-        default:
+        case ._count:
             fatalError()
         }
         
@@ -83,10 +87,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             self.fetchRequestTest()
         case .faults:
             self.faultsTest()
-        case .performance:
-            self.performanceTest()
-        default:
-            print("")
+        case .prefetch:
+            self.prefetchTest()
+        case .findOrFetch:
+            self.findOrFetchTest()
+        case ._count:
+            fatalError()
         }
         
     }
@@ -157,10 +163,30 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    func performanceTest() {
+    func prefetchTest() {
+        //Pre-fetch the object
         
+        object = Employee.fetch(in: self.moc) { (request) in
+            request.predicate = NSPredicate(format: "name = %@", "Emp990")
+            request.returnsObjectsAsFaults = false
+        }?.first
+        print("")
+    }
+    
+    func findOrFetchTest() {
+        //If you know your object graph, then use the findOrFetch method
+        let predicate = NSPredicate(format: "name = %@", "Emp990")
         
+        _ = Employee.fetch(in: self.moc) { (request) in
+            request.predicate = predicate
+            request.returnsObjectsAsFaults = false
+        }
+
+        print("")
         
+//        if let employee = Employee.findOrFetch(in: self.moc, matching: predicate) {
+//            print("\(employee.name)")
+//        }
     }
     
     

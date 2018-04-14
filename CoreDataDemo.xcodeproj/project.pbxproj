@@ -18,6 +18,7 @@
 		91417DEA20810B25002E7F97 /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DE820810B25002E7F97 /* Employee+CoreDataProperties.swift */; };
 		91417DED20810B5E002E7F97 /* Department+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DEB20810B5E002E7F97 /* Department+CoreDataClass.swift */; };
 		91417DEE20810B5E002E7F97 /* Department+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DEC20810B5E002E7F97 /* Department+CoreDataProperties.swift */; };
+		91417DF520819ABD002E7F97 /* CoreDataModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91417DF420819ABD002E7F97 /* CoreDataModelable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		91417DE820810B25002E7F97 /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		91417DEB20810B5E002E7F97 /* Department+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Department+CoreDataClass.swift"; sourceTree = "<group>"; };
 		91417DEC20810B5E002E7F97 /* Department+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Department+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		91417DF420819ABD002E7F97 /* CoreDataModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				91417DDF2080F9D4002E7F97 /* Info.plist */,
 				91417DD72080F9D2002E7F97 /* CoreDataDemo.xcdatamodeld */,
 				91417DE52080FDFD002E7F97 /* PersistenceController.swift */,
+				91417DF420819ABD002E7F97 /* CoreDataModelable.swift */,
 			);
 			path = CoreDataDemo;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				91417DD92080F9D2002E7F97 /* CoreDataDemo.xcdatamodeld in Sources */,
 				91417DD12080F9D2002E7F97 /* AppDelegate.swift in Sources */,
 				91417DE920810B25002E7F97 /* Employee+CoreDataClass.swift in Sources */,
+				91417DF520819ABD002E7F97 /* CoreDataModelable.swift in Sources */,
 				91417DEE20810B5E002E7F97 /* Department+CoreDataProperties.swift in Sources */,
 				91417DE62080FDFD002E7F97 /* PersistenceController.swift in Sources */,
 				91417DED20810B5E002E7F97 /* Department+CoreDataClass.swift in Sources */,
