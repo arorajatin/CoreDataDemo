@@ -23,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		910629E02081DE2800E48217 /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		910629E22081E0E800E48217 /* CoreDataDemo2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDemo2.xcdatamodel; sourceTree = "<group>"; };
 		91417DCD2080F9D2002E7F97 /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91417DD02080F9D2002E7F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91417DD22080F9D2002E7F97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -375,9 +376,10 @@
 		91417DD72080F9D2002E7F97 /* CoreDataDemo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				910629E22081E0E800E48217 /* CoreDataDemo2.xcdatamodel */,
 				91417DD82080F9D2002E7F97 /* CoreDataDemo.xcdatamodel */,
 			);
-			currentVersion = 91417DD82080F9D2002E7F97 /* CoreDataDemo.xcdatamodel */;
+			currentVersion = 910629E22081E0E800E48217 /* CoreDataDemo2.xcdatamodel */;
 			path = CoreDataDemo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
