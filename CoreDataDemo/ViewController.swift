@@ -16,6 +16,7 @@ enum Section: Int {
     case faults
     case prefetch
     case findOrFetch
+    case compoundIndex
     
     case _count
     
@@ -66,7 +67,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case .prefetch:
             cell.textLabel?.text = "Prefetch"
         case .findOrFetch:
-            cell.textLabel?.text = "Performance"
+            cell.textLabel?.text = "Find or Fetch (Performance)"
+        case .compoundIndex:
+            cell.textLabel?.text = "Compound Indexes"
         case ._count:
             fatalError()
         }
@@ -91,6 +94,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             self.prefetchTest()
         case .findOrFetch:
             self.findOrFetchTest()
+        case .compoundIndex:
+            self.compoundIndexTest()
         case ._count:
             fatalError()
         }
@@ -192,6 +197,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //        if let employee = Employee.findOrFetch(in: self.moc, matching: predicate) {
 //            print("\(employee.name)")
 //        }
+    }
+    
+    func compoundIndexTest() {
+        let _ = Employee.fetch(in: self.moc) { request in
+            request.sortDescriptors = [NSSortDescriptor(key: #keyPath(Employee.amazing), ascending: true),
+            NSSortDescriptor(key: #keyPath(Employee.score), ascending: true)]
+        }
+        
+        print("")
     }
     
     func random() -> Int {
