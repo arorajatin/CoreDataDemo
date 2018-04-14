@@ -135,9 +135,31 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func faultsTest() {
         
+        let fetchRequest = NSFetchRequest<Department>(entityName: "Department")
+        fetchRequest.predicate = NSPredicate(format: "name = %@", "D1")
+        fetchRequest.returnsObjectsAsFaults = false
+        fetchRequest.fetchLimit = 1
+        
+        if let departments = try? self.moc.fetch(fetchRequest) {
+            let department = departments[0]
+            print("\(department.name)")
+            print("")
+            print("\(department.employees?.count ?? 0)")
+            print("")
+            
+            if let employees = department.employees as? Set<Employee> {
+                for employee in employees {
+                    print("\(employee.objectID)")
+                    print("\(employee.name)")
+                }
+            }
+        }
+        
     }
     
     func performanceTest() {
+        
+        
         
     }
     
